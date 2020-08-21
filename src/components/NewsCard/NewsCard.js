@@ -9,11 +9,19 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const NewsCard = ({ article }) => {
+const NewsCard = ({
+  article: { description, publishedAt, source, title, url, urlToImage },
+  i,
+}) => {
   return (
     <Card>
       <CardActionArea>
-        <CardMedia />
+        <CardMedia
+          image={
+            urlToImage ||
+            "https://w0.pngwave.com/png/748/607/news-media-newspaper-advertising-information-news-icon-png-clip-art-thumbnail.png"
+          }
+        />
         <div>
           <Typography
             variant="body2"
@@ -26,11 +34,11 @@ const NewsCard = ({ article }) => {
             component="h2"
           ></Typography>
         </div>
-        <Typography gutterButtom variant="h5"></Typography>
+        <Typography  variant="h5"></Typography>
         <CardContent>
           <Typography
             varaint="body2"
-            color="textSecondard"
+            color="textSecondary"
             component="p"
           ></Typography>
         </CardContent>
