@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 
-const alanKey = "";
+const alanKey = process.env.REACT_APP_ALAN_KEY;
 
 const App = () => {
-    
   useEffect(() => {
     alanBtn({
       key: alanKey,
+      onCommand: ({ command }) => {
+        if (command === "testCommand") {
+          alert("This code worked");
+        }
+      },
     });
   }, []);
 
