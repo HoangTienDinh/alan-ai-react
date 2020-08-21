@@ -3,6 +3,9 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 
 const alanKey = process.env.REACT_APP_ALAN_KEY;
 
+console.log(alanBtn())
+
+
 const App = () => {
   useEffect(() => {
     alanBtn({
