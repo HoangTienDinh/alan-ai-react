@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import NewsCard from "../NewsCard/NewsCard";
 
-const NewsCards = () => {
-    return (
-        <div>
-            <h1>NewsCards</h1>
-        </div>
-    )
-}
+const NewsCards = ({ articles }) => {
+  return (
+    <div>
+      {articles.map((article, i) => (
+        <NewsCard />
+      ))}
+    </div>
+  );
+};
 
-export default NewsCards
+export default NewsCards;
