@@ -45,7 +45,7 @@ const NewsCards = ({ articles }) => {
               sm={6}
               md={4}
               lg={3}
-              className={classes.infoCards}
+              className={classes.infoCard}
             >
               <div
                 className={classes.card}
