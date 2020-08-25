@@ -8,15 +8,20 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
+import useStyles from "./styles";
+
 
 const NewsCard = ({
   article: { description, publishedAt, source, title, url, urlToImage },
   i,
 }) => {
+const classes = useStyles();
+
   return (
     <Card>
       <CardActionArea>
         <CardMedia
+          className={classes.media}
           image={
             urlToImage ||
             "https://w0.pngwave.com/png/748/607/news-media-newspaper-advertising-information-news-icon-png-clip-art-thumbnail.png"
@@ -32,17 +37,19 @@ const NewsCard = ({
         </div>
         <Typography variant="h5">{title}</Typography>
         <CardContent>
-          <Typography
-            varaint="body2"
-            color="textSecondary"
-            component="p"
-          >{description}</Typography>
+          <Typography varaint="body2" color="textSecondary" component="p">
+            {description}
+          </Typography>
         </CardContent>
       </CardActionArea>
 
       <CardActions>
-        <Button size="small" color="primary">Learn More</Button>
-        <Typography variant="h5" color="textSecondary">{i + 1}</Typography>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+        <Typography variant="h5" color="textSecondary">
+          {i + 1}
+        </Typography>
       </CardActions>
     </Card>
   );
