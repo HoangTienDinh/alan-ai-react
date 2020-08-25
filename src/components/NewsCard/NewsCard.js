@@ -20,6 +20,7 @@ const NewsCard = ({
   const [elRefs, setElRefs] = useState([]);
   const scrollToRef = (ref) => window.scroll(0, ref.current.offsetTop - 50);
 
+  // bottom two useEffects is to scroll to highlighted card (activeArticle)
   useEffect(() => {
     setElRefs((refs) =>
       Array(20)
