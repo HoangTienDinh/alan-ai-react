@@ -13,13 +13,15 @@ const App = () => {
   useEffect(() => {
     alanBtn({
       key: alanKey,
-      onCommand: ({ command, articles }) => {
+      onCommand: ({ command, articles, number}) => {
         if (command === "newHeadlines") {
           setNewsArticles(articles);
           // resets highlight when new search is being done
           setActiveArticle(-1)
         } else if (command === 'highlight') {
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1)
+        } else if (command === 'open') {
+          window.open(articles[number].url, '_blank');
         }
       },
     });
