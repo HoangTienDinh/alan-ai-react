@@ -10,16 +10,15 @@ import {
 } from "@material-ui/core";
 import useStyles from "./styles";
 
-
 const NewsCard = ({
   article: { description, publishedAt, source, title, url, urlToImage },
   i,
 }) => {
-const classes = useStyles();
+  const classes = useStyles();
 
   return (
-    <Card>
-      <CardActionArea>
+    <Card className={classes.card}>
+      <CardActionArea href={url} target="_blank">
         <CardMedia
           className={classes.media}
           image={
@@ -27,15 +26,19 @@ const classes = useStyles();
             "https://w0.pngwave.com/png/748/607/news-media-newspaper-advertising-information-news-icon-png-clip-art-thumbnail.png"
           }
         />
-        <div>
-          <Typography variant="body2" color="textSecondary" component="h2">
+        <div className={classes.details}>
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            component="h2"
+          >
             {new Date(publishedAt).toDateString()}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="h2">
             {source.name}
           </Typography>
         </div>
-        <Typography variant="h5">{title}</Typography>
+        <Typography className={classes.title} variant="h5">{title}</Typography>
         <CardContent>
           <Typography varaint="body2" color="textSecondary" component="p">
             {description}
@@ -43,7 +46,7 @@ const classes = useStyles();
         </CardContent>
       </CardActionArea>
 
-      <CardActions>
+      <CardActions className={classes.cardActions}>
         <Button size="small" color="primary">
           Learn More
         </Button>
