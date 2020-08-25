@@ -16,6 +16,7 @@ const App = () => {
       onCommand: ({ command, articles }) => {
         if (command === "newHeadlines") {
           setNewsArticles(articles);
+          // resets highlight when new search is being done
           setActiveArticle(-1)
         } else if (command === 'highlight') {
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1)
