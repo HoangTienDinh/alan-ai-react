@@ -5,3 +5,12 @@
 - Get your Alan API key from <https://alan.app/> and bring it into your `.env` file
 - Write code to interact with Alan at <https://alan.app/>, on their IDE
 - `npm start` to run the web app
+
+## Dependencies
+- @alan-ai
+- @material-ui
+- classnames
+- react
+- react-dom
+- react-scripts
+- words-to-numbers
