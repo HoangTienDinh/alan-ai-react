@@ -48,6 +48,7 @@ const App = () => {
           className={classes.alanLogo}
           alt="Alan Logo"
         />
+        HELLO
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
     </div>
