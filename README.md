@@ -1,5 +1,5 @@
 # News Chat Bot
-Communicate with Alan, an interactive chat bot you can chat with. You will be able to ask for articles via voice commands, and Alan will retrieve them for you. Asking for the latest news articles from major news outlets.
+Communicate with Alan, an interactive chat bot you can chat with. You will be able to ask for articles via voice commands, and Alan will retrieve them for you. Asking for the latest news articles from major news outlets. You can try out the app at https://alan-news-application.netlify.app/.
 
 ## Get Started
 - `git clone` this repo into your local directory
